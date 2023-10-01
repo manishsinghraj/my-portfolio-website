@@ -11,7 +11,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
 </head>
 
 <body>
@@ -22,32 +21,42 @@
                 <i class="fas fa-bars"></i>
             </label>
             <a href="#"><img class="img-logo" src="images/manishSingh-nobg-crop.png" alt="logo"></a>
-            <ul>
+            <ul class="nav-ul">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#experience">Experience</a></li>
                 <li><a href="#skills">Skills</a></li>
-                <li><a href="#project">Project</a></li>
-                <li><a href="#threeD">3D/Art</a></li>
+                <li><a href="#project3">Project</a></li>
+                <li><a href="#threeD-gallery">3D/Art</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
     </header>
+
+    <div>
+        <img src="images/arrows/pngwing.com.png" alt="Arrow" class=" props pencil-stroke-image ">
+        <!-- <img src="images/arrows/down-arrow.png" alt="Arrow" class="down-arrow-image"> -->
+        <img src="images/arrows/pngwing.com (2).png" alt="Arrow" class="props middle-arrow-image">
+        <!-- <img src="images/arrows/282_Arrow_Set.eps_crop.png" alt="Arrow" class="props arrow-image"> -->
+        <img src="images/arrows/pngwing.com (1).png" alt="stroke" class="props brush-stroke-image">
+    </div>
+
     <section class="details" id="home">
         <div class="pic">
             <img src="images/manishSingh.jpg" alt="pic">
         </div>
         <div class="text-container">
             <div class="text">
-                <p class="text_p1">Hello, It's me</p>
+                <p class="text_p1">Hello <span class="wave-emoji">👋</span>, It's me </p>
                 <h1 class="name">Manish Singh</h1>
-                <p class="text_p2">I'm a </p>
-                <p class="text_p3">I have 2.5 years of skills in the IT industry as an IVR Bot Developer</p>
+                <p class="text_p2">I'm a <span class="auto-type"></span></p>
+                <p class="text_p3">I have <span id="exp-years">2.5</span> years of experience in the IT industry as an
+                    IVR Bot Developer</p>
             </div>
             <div class="btn-container">
                 <button class="btn btn-color-2" onclick="window.open('./assets/MANISHSINGHRESUME.pdf')">
                     Download Resume
                 </button>
-                <button class="btn btn-color-1" onclick="location.href='./#contact'">
+                <button class="btn btn-color-1" onclick="location.href='#contact'">
                     Contact Info
                 </button>
             </div>
@@ -60,6 +69,7 @@
                     class='bx bxl-instagram-alt'></i></a>
         </div>
     </section>
+
     <section class="experience-education" id="experience">
         <div class="experience-education-container">
             <div class="exp-edu-about-containers">
@@ -68,10 +78,25 @@
                     <div class="stack-content">
                         <div class="box">
                             <h3>Cognizant</h3>
-                            <h4>2021 - 2023</h4>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda adipisci facilis
-                                consequuntur asperiores! Illum magnam ut praesentium mollitia. Eum ex labore
-                                reiciendis officia, soluta rem eligendi provident repellat esse! Corporis.</p>
+                            <h4 class="years" data-months="5">2021 - 2023</h4>
+                            <div class="content">
+                                <ul class="exp-edu-ul">
+                                    <li>Majorly working on Kore.ai Bot Development</li>
+                                    <li>Kore.ai Certification</li>
+                                    <li>Responsible for Code Build as per the Business Requirements & Modifications</li>
+                                    <li>Specifically working on AOM Campaigns by using tool such as Genesys, SQL and IVR
+                                        Channel</li>
+                                    <li>Using Cyara tool for executing Test cases as part of testing Bot. </li>
+                                    <li>Creating Rest API's, existing Data Layer code changes </li>
+                                    <li>Actively taking part in On-call Prod Monitoring Activities</li>
+                                    <li>Exploring different tools available and getting Hands-on</li>
+                                </ul>
+                            </div>
+                            <div class="drop-down">
+                                <button class="recognition">
+                                    <a href="assets/Recognition.pdf" target="_blank">recognition</a>
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -81,24 +106,31 @@
                         <div class="box">
                             <h3>Sahyadri College of Engineering & Management</h3>
                             <h4>B.E Mechanical Engineering</h4>
-                            <h4>2016 - 2020</h4>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda adipisci facilis
-                                consequuntur asperiores! Illum magnam ut praesentium mollitia. Eum ex labore
-                                reiciendis officia, soluta rem eligendi provident repellat esse! Corporis.</p>
+                            <h4 class="years">2016 - 2020</h4>
+                            <div class="content">
+                                <ul class="exp-edu-ul">
+                                    <li>Majorly working on Kore.ai Bot Development</li>
+                                    <li>Kore.ai Certification</li>
+                                </ul>
+                            </div>
                         </div>
                         <div class="box">
                             <h3>St. Aloysius College</h3>
                             <h4>Electronics</h4>
-                            <h4>2015 - 2016</h4>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda adipisci facilis
-                                consequuntur asperiores! Illum magnam ut praesentium mollitia. Eum ex labore
-                                reiciendis officia, soluta rem eligendi provident repellat esse! Corporis.</p>
+                            <h4 class="years">2014 - 2016</h4>
+                            <div class="content">
+                                <ul class="exp-edu-ul">
+                                    <li>Majorly working on Kore.ai Bot Development</li>
+                                    <li>Kore.ai Certification</li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+
     <section class="skills" id="skills">
         <h1 class="title">Skills</h1>
         <div class="skills-details-container">
@@ -122,6 +154,13 @@
                             </div>
                         </article>
                         <article>
+                            <i class='icon bx bxl-tailwind-css'></i>
+                            <div>
+                                <h3>Tailwind css</h3>
+                                <p>Basic</p>
+                            </div>
+                        </article>
+                        <article>
                             <i class='icon bx bxl-javascript'></i>
                             <div>
                                 <h3>JavaScript</h3>
@@ -135,13 +174,6 @@
                                 <p>Basic</p>
                             </div>
                         </article>
-                        <!-- <article>
-                            <i class='icon bx bxl-tailwind-css'></i>
-                            <div>
-                                <h3>Tailwind css</h3>
-                                <p>Basic</p>
-                            </div>
-                        </article> -->
                     </div>
                 </div>
                 <div class="details-container">
@@ -226,6 +258,7 @@
             </div>
         </div>
     </section>
+
     <!-- <section class="projects">
         <h1 class="title">Projects</h1>
         <div class="project-detail-container">
@@ -329,7 +362,7 @@
             </div>
         </div>
     </section> -->
-    <section class="project2">
+    <!-- <section class="project2">
         <h1 class="title">Projects</h1>
         <div class="project2-container">
             <div class="project2-grid-container">
@@ -412,8 +445,98 @@
                 </div>
             </div>
         </div>
+    </section> -->
+
+    <section class="project3" id="project3">
+        <h1 class="title">Projects</h1>
+        <div class="project3-container">
+            <div class="project3-grid-container">
+                <div class="project3-card">
+                    <div class="project3-details">
+                        <img src="images/download.jpg">
+                        <div class="project-info">
+                            <h1>Project 1</h1>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi odit nisi neque autem,
+                                doloribus, quia facilis corrupti repudiandae id natus, sed aperiam veniam voluptatem
+                                enim voluptatibus. Nulla unde aperiam assumenda!</p>
+                        </div>
+                        <div class="project-icon">
+                            <i class='icon bx bxl-html5'></i>
+                            <i class='icon bx bxl-html5'></i>
+                            <i class='icon bx bxl-html5'></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="project3-card">
+                    <div class="project3-details">
+                        <img src="images/download.jpg">
+                        <div class="project-info">
+                            <h1>Project 1</h1>
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laboriosam dignissimos deleniti
+                                excepturi iusto soluta! Eaque ratione nemo nulla quo aliquid asperiores cum numquam et
+                                labore, sapiente qui nam reiciendis. Quo?</p>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="project3-card">
+                    <div class="project3-details">
+                        <img src="images/download.jpg">
+                        <div class="project-info">
+                            <h1>Project 1</h1>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Id autem dolore odio tempora
+                                repudiandae hic quibusdam ea alias quae tempore voluptatum aliquam, inventore itaque
+                                pariatur iusto voluptatem sed rem minima.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="project3-card">
+                    <div class="project3-details">
+                        <img src="images/download.jpg">
+                        <div class="project-info">
+                            <h1>Project 1</h1>
+                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reprehenderit aliquid, id velit
+                                culpa maiores consectetur provident eligendi nisi dolorum odit quaerat repudiandae fuga
+                                voluptatum ex praesentium nostrum impedit recusandae modi?</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="project3-card">
+                    <div class="project3-details">
+                        <img src="images/download.jpg">
+                        <div class="project-info">
+                            <h1>Project 1</h1>
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vel eveniet possimus quod
+                                repudiandae facilis quis voluptatem consequuntur natus, excepturi delectus deleniti
+                                reprehenderit qui? Expedita, veritatis enim velit et suscipit fugit.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="project3-card">
+                    <div class="project3-details">
+                        <img src="images/download.jpg">
+                        <div class="project-info">
+                            <h1>Project 1</h1>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rem doloribus eveniet incidunt
+                                illum voluptates omnis, vel temporibus quae, laborum aliquid est reiciendis dolorum,
+                                nobis doloremque quia numquam ratione odio ut.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="project3-card">
+                    <div class="project3-details">
+                        <img src="images/download.jpg">
+                        <div class="project-info">
+                            <h1>Project 1</h1>
+                            <p>lore</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
-    <section class="threeD-gallery">
+
+    <section class="threeD-gallery" id="threeD-gallery">
         <h1 class="title" id="title-3d">Product Design and Render</h1>
         <div class="threeD-container">
             <div class="threeD-image-box col-2">
@@ -513,6 +636,49 @@
             </div>
         </div>
     </section>
+    <section class="contact" id="contact">
+        <h1 class="title">Contact</h1>
+        <div class="contact-container">
+            <form>
+                <h3>Contact me</h3>
+                <input type="text" id="name" placeholder="Your Name" required>
+                <input type="email" id="email" placeholder="Email Id" required>
+                <input type="text" id="phone" placeholder="Phone no." required>
+                <textarea id="message" rows="5" placeholder="Your Message"></textarea>
+                <button type="submit">Submit</button>
+            </form>
+            <div class="contact-details">
+                <div class="my-details">
+                    <div class="bio">
+                        <a href="https://www.linkedin.com/in/manish-singh97/" target="_blank"><i
+                                class="fa-solid fa-user"></i></a>
+                        <h3>Manish Singh</h3>
+                    </div>
+                    <div class="bio">
+                        <a href="https://www.linkedin.com/in/manish-singh97/" target="_blank"><i
+                                class="fa-solid fa-phone"></i></a>
+                        <h3>+91 7259159962</h3>
+                    </div>
+                    <div class="bio">
+                        <a href="https://www.linkedin.com/in/manish-singh97/" target="_blank"><i
+                                class="fa-solid fa-envelope"></i></a>
+                        <h3>manishpurohit97@gmail.com</h3>
+                    </div>
+
+                </div>
+                <div class="contact-social-icon">
+                    <a href="https://www.linkedin.com/in/manish-singh97/" target="_blank"><i
+                            class='bx bxl-linkedin-square'></i></a>
+                    <a href="https://github.com/manishsinghraj" target="_blank"><i class='bx bxl-github'></i></a>
+                    <a href="https://www.instagram.com/manish_singh97_/" target="_blank"><i
+                            class='bx bxl-instagram-alt'></i></a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script> -->
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
     <script src="script.js"></script>
 </body>
 

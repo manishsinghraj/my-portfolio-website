@@ -1,4 +1,55 @@
+//Type Effect
 
+document.addEventListener("DOMContentLoaded", function () {
+    var typed = new Typed(".auto-type", {
+        strings: ["Developer", "Passionate Coder", "3D Enthusiast"],
+        typeSpeed: 50,
+        backSpeed: 50,
+        loop: true
+    });
+});
+
+
+//Total years calculator
+document.addEventListener("DOMContentLoaded", function () {
+    const totalYearsElements = document.querySelectorAll(".years");
+
+    totalYearsElements.forEach(function (totalYears) {
+        const totalMonths = parseInt(totalYears.getAttribute("data-months")) || 0;
+
+        let span = document.createElement("span");
+        span.innerHTML = Math.abs(eval(totalYears.textContent)) + " yrs " + totalMonths + " mos ";
+        totalYears.appendChild(span);
+
+        span.style.position = "absolute";
+        span.style.right = "0";
+        span.style.paddingRight = "20px";
+    });
+});
+
+
+// JavaScript to dynamically adjust item dimensions
+window.addEventListener('load', function () {
+    const containers = document.querySelectorAll('.threeD-image-box');
+
+    containers.forEach((container) => {
+        const content = container.querySelector('img, video');
+        if (content) {
+            const containerWidth = container.offsetWidth;
+            const containerHeight = container.offsetHeight;
+            const contentWidth = content.width;
+            const contentHeight = content.height;
+
+            if (contentWidth / contentHeight > containerWidth / containerHeight) {
+                content.style.width = '100%';
+                content.style.height = 'auto';
+            } else {
+                content.style.width = 'auto';
+                content.style.height = '100%';
+            }
+        }
+    });
+});
 
 
 // const carousel = document.querySelector(".project-card-container");
@@ -83,66 +134,45 @@
 
 //Project slider
 
-let items = document.querySelectorAll('.slider .item');
-let next = document.getElementById('next');
-let prev = document.getElementById('prev');
+// let items = document.querySelectorAll('.slider .item');
+// let next = document.getElementById('next');
+// let prev = document.getElementById('prev');
 
-let active = 3;
-function loadShow() {
-    let stt = 0;
-    items[active].style.transform = `none`;
-    items[active].style.zIndex = 1;
-    items[active].style.filter = 'none';
-    items[active].style.opacity = 1;
-    for (var i = active + 1; i < items.length; i++) {
-        stt++;
-        items[i].style.transform = `translateX(${120 * stt}px) scale(${1 - 0.2 * stt}) perspective(16px) rotateY(-1deg)`;
-        items[i].style.zIndex = -stt;
-        items[i].style.filter = 'blur(5px)';
-        items[i].style.opacity = stt > 2 ? 0 : 0.6;
-    }
-    stt = 0;
-    for (var i = active - 1; i >= 0; i--) {
-        stt++;
-        items[i].style.transform = `translateX(${-120 * stt}px) scale(${1 - 0.2 * stt}) perspective(16px) rotateY(1deg)`;
-        items[i].style.zIndex = -stt;
-        items[i].style.filter = 'blur(5px)';
-        items[i].style.opacity = stt > 2 ? 0 : 0.6;
-    }
-}
-loadShow();
-next.onclick = function () {
-    active = active + 1 < items.length ? active + 1 : active;
-    loadShow();
-}
-prev.onclick = function () {
-    active = active - 1 >= 0 ? active - 1 : active;
-    loadShow();
-}
+// let active = 3;
+// function loadShow() {
+//     let stt = 0;
+//     items[active].style.transform = `none`;
+//     items[active].style.zIndex = 1;
+//     items[active].style.filter = 'none';
+//     items[active].style.opacity = 1;
+//     for (var i = active + 1; i < items.length; i++) {
+//         stt++;
+//         items[i].style.transform = `translateX(${120 * stt}px) scale(${1 - 0.2 * stt}) perspective(16px) rotateY(-1deg)`;
+//         items[i].style.zIndex = -stt;
+//         items[i].style.filter = 'blur(5px)';
+//         items[i].style.opacity = stt > 2 ? 0 : 0.6;
+//     }
+//     stt = 0;
+//     for (var i = active - 1; i >= 0; i--) {
+//         stt++;
+//         items[i].style.transform = `translateX(${-120 * stt}px) scale(${1 - 0.2 * stt}) perspective(16px) rotateY(1deg)`;
+//         items[i].style.zIndex = -stt;
+//         items[i].style.filter = 'blur(5px)';
+//         items[i].style.opacity = stt > 2 ? 0 : 0.6;
+//     }
+// }
+// loadShow();
+// next.onclick = function () {
+//     active = active + 1 < items.length ? active + 1 : active;
+//     loadShow();
+// }
+// prev.onclick = function () {
+//     active = active - 1 >= 0 ? active - 1 : active;
+//     loadShow();
+// }
 
 
-// JavaScript to dynamically adjust item dimensions
-window.addEventListener('load', function () {
-    const containers = document.querySelectorAll('.threeD-image-box');
 
-    containers.forEach((container) => {
-        const content = container.querySelector('img, video');
-        if (content) {
-            const containerWidth = container.offsetWidth;
-            const containerHeight = container.offsetHeight;
-            const contentWidth = content.width;
-            const contentHeight = content.height;
-
-            if (contentWidth / contentHeight > containerWidth / containerHeight) {
-                content.style.width = '100%';
-                content.style.height = 'auto';
-            } else {
-                content.style.width = 'auto';
-                content.style.height = '100%';
-            }
-        }
-    });
-});
 
 
 

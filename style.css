@@ -940,11 +940,17 @@ article .icon {
     align-items: flex-start;
     gap: 0.5rem;
     color: #fff;
+    padding-left: 20px;
 }
 
-.project-info p {
-    text-align: left;
+.project-info h1 {
+    font-size: 25px;
+    color: #00ffff
+}
 
+.project-info p,
+li {
+    text-align: left;
 }
 
 .project3-details img {
@@ -952,11 +958,15 @@ article .icon {
     height: 100px;
 }
 
-.project-icon {
+.project-info .project-icon {
     display: flex;
     font-size: 30px;
-    flex-direction: column;
+    flex-direction: row;
+    color: #ffffff;
+    gap: 0.5rem;
 }
+
+
 
 @media (max-width: 820px) {
     .project3-grid-container {
@@ -1001,8 +1011,16 @@ article .icon {
 }
 
 #title-3d {
-    color: #eaeaea;
+    color: #00ffff;
     padding-bottom: 25px;
+}
+
+#title-3d p {
+    font-style: italic;
+    color: #eaeaea;
+    font-size: 0.4em;
+    margin: 1rem 0 0 0;
+    text-wrap: balance;
 }
 
 .threeD-container {
@@ -1143,6 +1161,18 @@ form button:active {
     color: #fff;
 }
 
+.quote {
+    display: block;
+    font-style: italic;
+    color: #ffffff;
+    font-size: 1.5em;
+    margin: 5rem 1rem 40px;
+}
+
+.quote-emoji {
+    font-style: normal;
+}
+
 @media (max-width:800px) {
     .contact {
         padding: 80px 0;
@@ -1154,13 +1184,13 @@ form button:active {
 
     form {
         padding: 12px;
-        font-size: 12px;
+        font-size: 8px;
     }
 
     /* CONTACT - SOCIAL-ICON */
 
     .contact-social-icon {
-        font-size: 30px;
+        font-size: 25px;
         display: flex;
         flex-direction: row;
         justify-content: space-around;
@@ -1171,7 +1201,7 @@ form button:active {
 
     form input,
     form textarea {
-        padding: 4px;
+        padding: 9px;
         font-size: 12px;
         border-radius: 8px;
     }
@@ -1193,5 +1223,13 @@ form button:active {
         font-size: 15px;
         margin: 0;
         color: #fff;
+    }
+
+    .quote {
+        display: block;
+        font-style: italic;
+        color: #ffffff;
+        font-size: 1em;
+        margin: 1rem 1rem 40px;
     }
 }

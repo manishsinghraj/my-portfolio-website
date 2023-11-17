@@ -10,7 +10,7 @@
     <!-- CDN  -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css"> -->
 </head>
 
 <body>
@@ -25,7 +25,7 @@
                 <li><a href="#home">Home</a></li>
                 <li><a href="#experience">Experience</a></li>
                 <li><a href="#skills">Skills</a></li>
-                <li><a href="#project3">Project</a></li>
+                <li><a href="#project">Project</a></li>
                 <li><a href="#threeD-gallery">3D</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
@@ -34,9 +34,7 @@
 
     <div>
         <img src="images/arrows/pngwing.com.png" alt="Arrow" class=" props pencil-stroke-image ">
-        <!-- <img src="images/arrows/down-arrow.png" alt="Arrow" class="down-arrow-image"> -->
         <img src="images/arrows/pngwing.com (2).png" alt="Arrow" class="props middle-arrow-image">
-        <!-- <img src="images/arrows/282_Arrow_Set.eps_crop.png" alt="Arrow" class="props arrow-image"> -->
         <img src="images/arrows/pngwing.com (1).png" alt="stroke" class="props brush-stroke-image">
     </div>
 
@@ -53,7 +51,7 @@
                     IVR Bot Developer</p>
             </div>
             <div class="btn-container">
-                <button class="btn btn-color-2" onclick="window.open('./assets/MANISHSINGHRESUME.pdf')">
+                <button class="btn btn-color-2" id="downloadResumeButton">
                     Download Resume
                 </button>
                 <button class="btn btn-color-1" onclick="location.href='#contact'">
@@ -95,9 +93,9 @@
                                         platform.</li>
                                 </ul>
                             </div>
-                            <div class="drop-down">
-                                <button class="recognition">
-                                    <a href="assets/Recognition.pdf" target="_blank">recognition</a>
+                            <div>
+                                <button class="recognition" id="recognitionButton">
+                                    recognition
                                 </button>
                             </div>
                         </div>
@@ -110,23 +108,11 @@
                             <h3>Sahyadri College of Engineering & Management</h3>
                             <h4>B.E Mechanical Engineering</h4>
                             <h4 class="years">2016 - 2020</h4>
-                            <!-- <div class="content">
-                                <ul class="exp-edu-ul">
-                                    <li>Majorly working on Kore.ai Bot Development</li>
-                                    <li>Kore.ai Certification</li>
-                                </ul>
-                            </div> -->
                         </div>
                         <div class="box">
-                            <h3>St. Aloysius College</h3>
+                            <h3>St. Aloysius PU College</h3>
                             <h4>Electronics</h4>
                             <h4 class="years">2014 - 2016</h4>
-                            <!-- <div class="content">
-                                <ul class="exp-edu-ul">
-                                    <li>Majorly working on Kore.ai Bot Development</li>
-                                    <li>Kore.ai Certification</li>
-                                </ul>
-                            </div> -->
                         </div>
                     </div>
                 </div>
@@ -143,17 +129,16 @@
                     <div class="article-container">
                         <article>
                             <i class='icon bx bxl-html5'></i>
-                            <!-- <img src="./assets/checkmark.png" alt="skills icon" class="icon" /> -->
                             <div>
                                 <h3>HTML</h3>
-                                <p>Basic</p>
+                                <p>Intermediate</p>
                             </div>
                         </article>
                         <article>
                             <i class='icon bx bxl-css3'></i>
                             <div>
                                 <h3>CSS</h3>
-                                <p>Basic</p>
+                                <p>Intermediate</p>
                             </div>
                         </article>
                         <article>
@@ -174,7 +159,7 @@
                             <i class='icon bx bxl-react'></i>
                             <div>
                                 <h3>React</h3>
-                                <p>Basic</p>
+                                <p>Intermediate</p>
                             </div>
                         </article>
                     </div>
@@ -203,13 +188,6 @@
                                 <p>Basic</p>
                             </div>
                         </article>
-                        <!-- <article>
-                            <img src="./assets/checkmark.png" alt="skills icon" class="icon" />
-                            <div>
-                                <h3>Express JS</h3>
-                                <p>Intermediate</p>
-                            </div>
-                        </article> -->
                         <article>
                             <i class='icon bx bxl-git'></i>
                             <div>
@@ -227,30 +205,24 @@
                 <div class="details-container">
                     <div class="article-container">
                         <article>
-                            <!-- <i class='icon bx bxl-blender'></i> -->
-                            <!-- <img src="./images/apache-jmeter-icon.png" alt="skills icon" class="icon" /> -->
                             <div>
                                 <h3>Jmeter</h3>
                                 <p>Intermediate</p>
                             </div>
                         </article>
                         <article>
-                            <!-- <i class='icon bx bxl-blender'></i> -->
-                            <!-- <img src="./assets/checkmark.png" alt="skills icon" class="icon" /> -->
                             <div>
                                 <h3>Blender</h3>
                                 <p>Basic</p>
                             </div>
                         </article>
                         <article>
-                            <!-- <i class='icon bx bxl-css3'></i> -->
                             <div>
                                 <h3>Autodesk Inventor</h3>
                                 <p>Basic</p>
                             </div>
                         </article>
                         <article>
-                            <!-- <i class='icon bx bxl-javascript'></i> -->
                             <div>
                                 <h3>Keyshot</h3>
                                 <p>Intermediate</p>
@@ -262,203 +234,23 @@
         </div>
     </section>
 
-    <!-- <section class="projects">
+    <section class="project" id="project">
         <h1 class="title">Projects</h1>
-        <div class="project-detail-container">
-            <div class="project-card-container">
-                <div class="slider">
-                    <div class="item">
-                        <div class="project-details-container">
-                            <h1>Project 1</h1>
-                            <div class="project-image">
-                                <img src="images/3d-purple-realistic-brush-stroke-oil-or-acrylic-paint-wave-liquid-shape-trendy-design-3d-illustration-png.webp"
-                                    width=250px height=120px alt="img">
-                            </div>
-                            <article>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt quas fugiat perferendis
-                                    saepe
-                                    animi
-                                    iure facere odit dolorum itaque similique repellat, maiores, illum distinctio eius
-                                    delectus.
-                                    Labore nulla deserunt et.</p>
-                            </article>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="project-details-container">
-                            <h1>Project 2</h1>
-                            <div class="project-image">
-                                <img src="images/3d-purple-realistic-brush-stroke-oil-or-acrylic-paint-wave-liquid-shape-trendy-design-3d-illustration-png.webp"
-                                    width=250px height=120px alt="img">
-                            </div>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt quas fugiat perferendis
-                                saepe
-                                animi
-                                iure facere odit dolorum itaque similique repellat, maiores, illum distinctio eius
-                                delectus.
-                                Labore nulla deserunt et.</p>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="project-details-container">
-                            <h1>Project 3</h1>
-                            <div class="project-image">
-                                <img src="images/3d-purple-realistic-brush-stroke-oil-or-acrylic-paint-wave-liquid-shape-trendy-design-3d-illustration-png.webp"
-                                    width=250px height=120px alt="img">
-                            </div>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt quas fugiat perferendis
-                                saepe
-                                animi
-                                iure facere odit dolorum itaque similique repellat, maiores, illum distinctio eius
-                                delectus.
-                                Labore nulla deserunt et.</p>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="project-details-container">
-                            <h1>Project 4</h1>
-                            <div class="project-image">
-                                <img src="images/3d-purple-realistic-brush-stroke-oil-or-acrylic-paint-wave-liquid-shape-trendy-design-3d-illustration-png.webp"
-                                    width=250px height=120px alt="img">
-                            </div>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt quas fugiat perferendis
-                                saepe
-                                animi
-                                iure facere odit dolorum itaque similique repellat, maiores, illum distinctio eius
-                                delectus.
-                                Labore nulla deserunt et.</p>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="project-details-container">
-                            <h1>Project 4</h1>
-                            <div class="project-image">
-                                <img src="images/3d-purple-realistic-brush-stroke-oil-or-acrylic-paint-wave-liquid-shape-trendy-design-3d-illustration-png.webp"
-                                    width=250px height=120px alt="img">
-                            </div>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt quas fugiat perferendis
-                                saepe
-                                animi
-                                iure facere odit dolorum itaque similique repellat, maiores, illum distinctio eius
-                                delectus.
-                                Labore nulla deserunt et.</p>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="project-details-container">
-                            <h1>Project 4</h1>
-                            <div class="project-image">
-                                <img src="images/3d-purple-realistic-brush-stroke-oil-or-acrylic-paint-wave-liquid-shape-trendy-design-3d-illustration-png.webp"
-                                    width=250px height=120px alt="img">
-                            </div>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt quas fugiat perferendis
-                                saepe
-                                animi
-                                iure facere odit dolorum itaque similique repellat, maiores, illum distinctio eius
-                                delectus.
-                                Labore nulla deserunt et.</p>
-                        </div>
-                    </div>
-                    <button id="next">></button>
-                    <button id="prev">&#60</button>
-                </div>
-            </div>
-        </div>
-    </section> -->
-    <!-- <section class="project2">
-        <h1 class="title">Projects</h1>
-        <div class="project2-container">
-            <div class="project2-grid-container">
-                <div class="project2-card">
-                    <div class="project2-details">
-                        <h1>Project 1</h1>
-                        <img src="images/download.jpg">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi laboriosam voluptas est
-                            quidem,
-                            nemo saepe illo tempore maiores earum, omnis fugit eius magni rem quasi sed officia vitae
-                            aut
-                            possimus?</p>
-                    </div>
-                </div>
-                <div class="project2-card">
-                    <div class="project2-details">
-                        <h1>Project 1</h1>
-                        <img src="images/download.jpg">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi laboriosam voluptas est
-                            quidem,
-                            nemo saepe illo tempore maiores earum, omnis fugit eius magni rem quasi sed officia vitae
-                            aut
-                            possimus?</p>
-                    </div>
-                </div>
-                <div class="project2-card">
-                    <div class="project2-details">
-                        <h1>Project 1</h1>
-                        <img src="images/download.jpg">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi laboriosam voluptas est
-                            quidem,
-                            nemo saepe illo tempore maiores earum, omnis fugit eius magni rem quasi sed officia vitae
-                            aut
-                            possimus?</p>
-                    </div>
-                </div>
-                <div class="project2-card">
-                    <div class="project2-details">
-                        <h1>Project 1</h1>
-                        <img src="images/download.jpg">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi laboriosam voluptas est
-                            quidem,
-                            nemo saepe illo tempore maiores earum, omnis fugit eius magni rem quasi sed officia vitae
-                            aut
-                            possimus?</p>
-                    </div>
-                </div>
-                <div class="project2-card">
-                    <div class="project2-details">
-                        <h1>Project 1</h1>
-                        <img src="images/download.jpg">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi laboriosam voluptas est
-                            quidem,
-                            nemo saepe illo tempore maiores earum, omnis fugit eius magni rem quasi sed officia vitae
-                            aut
-                            possimus?</p>
-                    </div>
-                </div>
-                <div class="project2-card">
-                    <div class="project2-details">
-                        <h1>Project 1</h1>
-                        <img src="images/download.jpg">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi laboriosam voluptas est
-                            quidem,
-                            nemo saepe illo tempore maiores earum, omnis fugit eius magni rem quasi sed officia vitae
-                            aut
-                            possimus?</p>
-                    </div>
-                </div>
-                <div class="project2-card">
-                    <div class="project2-details">
-                        <h1>Project 1</h1>
-                        <img src="images/download.jpg">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi laboriosam voluptas est
-                            quidem,
-                            nemo saepe illo tempore maiores earum, omnis fugit eius magni rem quasi sed officia vitae
-                            aut
-                            possimus?</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section> -->
-
-    <section class="project3" id="project3">
-        <h1 class="title">Projects</h1>
-        <div class="project3-container">
-            <div class="project3-grid-container">
-                <div class="project3-card">
-                    <div class="project3-details">
-                        <img src="images/download.jpg">
+        <div class="project-container">
+            <div class="project-grid-container">
+                <div class="project-card">
+                    <div class="project-details">
+                        <img src="images/ssml-icon.png">
                         <div class="project-info">
-                            <h1>SSML Editor</h1>
+                            <div class="project-heading">
+                                <h1>SSML Editor</h1>
+                                <div id="project-links">
+                                    <a href="https://github.com/manishsinghraj/ssml-editor" target="_blank"><i
+                                            class='bx bxl-github'></i></a>
+                                    <a href="https://ssml-editor.netlify.app/" target="_blank"><i
+                                            class='bx bx-link'></i></a>
+                                </div>
+                            </div>
                             <p>
                                 Developed a React-based SSML Editor with AWS Polly integration, enabling advanced speech
                                 synthesis. <br>
@@ -478,14 +270,20 @@
                                 <i class='icon bx bxl-aws'></i>
                             </div>
                         </div>
-
                     </div>
                 </div>
-                <div class="project3-card">
-                    <div class="project3-details">
-                        <img src="images/download.jpg">
+                <div class="project-card">
+                    <div class="project-details">
+                        <img src="images/form-validation.png">
                         <div class="project-info">
-                            <h1>Form Validation</h1>
+                            <div class="project-heading">
+                                <h1>Form Validation</h1>
+                                <div id="project-links">
+                                    <a href="https://github.com/manishsinghraj/form-validation" target="_blank"><i
+                                            class='bx bxl-github'></i></a>
+                                </div>
+                            </div>
+
                             <p>
                                 Built a React-based Form Validation system without external libraries for robust user
                                 input handling and Real-time feedback.<br>
@@ -505,35 +303,48 @@
                         </div>
                     </div>
                 </div>
-                <div class="project3-card">
-                    <div class="project3-details">
-                        <img src="images/download.jpg">
+                <div class="project-card">
+                    <div class="project-details">
+                        <img src="images/hooks.png">
                         <div class="project-info">
-                            <h1>React Hooks Demo</h1>
+                            <div class="project-heading">
+                                <h1>React Hooks Demo</h1>
+                                <div id="project-links">
+                                    <a href="https://github.com/manishsinghraj/learn-ReactJS" target="_blank"><i
+                                            class='bx bxl-github'></i></a>
+                                </div>
+                            </div>
                             <p>
                                 Crafted a small React Hooks demo project for learning purposes. This project showcases
                                 the implementation and usage of
                                 various React hooks for state management, side effects, and memoization.<br>
                             <ul class="project-desc-features">
-                                <li>useState, useEffect, useContext, useCallback, useMemo.</li>
+                                <li>useState, useEffect, useContext, useReducer and many more.</li>
                                 <li>Demonstrates the use of React hooks for state and side effect management.</li>
-                                <li>Intuitive handling of component lifecycles with useEffect and useState.</li>
+                                <li>Demonstrates the application of various hooks, such as counter, theme change, todos,
+                                    etc., showcasing their practical uses in different scenarios.</li>
+
                             </ul>
                             <p><span style="font-weight: bold">Note : </span>Project done for learning Purpose!</p>
-                            <!-- <p><span style="font-weight: bold">Video reference : </span><a style="color: #0095ff"
-                                    href="https://www.youtube.com/watch?v=tIdNeoHniEY" target="_blank">Link</a></p>
-                            </p> -->
                             <div class="project-icon">
                                 <i class='icon bx bxl-react'></i>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="project3-card">
-                    <div class="project3-details">
-                        <img src="images/download.jpg">
+                <div class="project-card">
+                    <div class="project-details">
+                        <img src="images/portfolio (2).png">
                         <div class="project-info">
-                            <h1>Portfolio Website</h1>
+                            <div class="project-heading">
+                                <h1>Portfolio Website</h1>
+                                <div id="project-links">
+                                    <a href="https://github.com/manishsinghraj/my-portfolio-website" target="_blank"><i
+                                            class='bx bxl-github'></i></a>
+                                    <a href="https://manish-singh-portfolio.netlify.app/" target="_blank"><i
+                                            class='bx bx-link'></i></a>
+                                </div>
+                            </div>
                             <p>
                                 Created a responsive Portfolio Website using HTML, CSS, and JavaScript. Employed modern
                                 web technologies, including
@@ -547,8 +358,6 @@
                                 <li>Contact form integration with Formspree for efficient email communication.</li>
                                 <li>In-depth utilization of CSS for styling, ensuring a visually appealing and cohesive
                                     user interface.</li>
-                                <li>Smooth transitions and animations for a polished user experience.</li>
-
                             </ul>
                             </p>
                             <div class="project-icon">
@@ -565,7 +374,7 @@
 
     <section class="threeD-gallery" id="threeD-gallery">
         <h1 class="title" id="title-3d">Product Design and Render
-            <p>"Here are some of my works fueled by my passion for 3D modeling and rendering."</p>
+            <p>"Here are some of my works fueled by my passion for 3D modeling, rendering, and a hint of animation."</p>
         </h1>
         <div class="threeD-container">
             <div class="threeD-image-box col-2">
@@ -642,8 +451,8 @@
             <div class="threeD-image-box col-2">
                 <img src="images/3D/misc/TABLE1.png" alt="">
             </div>
-            <div class="threeD-image-box col-2 ">
-                <img src="images/3D/paper cutter/6.png" alt="">
+            <div class="threeD-image-box col-2">
+                <img src="images/3D/smart tag/smart tag exploaded view and closeup.24133.png" alt="">
             </div>
             <div class="threeD-image-box">
                 <img src="images/3D/misc/lip.310.jpg" alt="">
@@ -662,6 +471,12 @@
             </div>
             <div class="threeD-image-box col-2">
                 <img src="images/3D/misc/untitled.309.png" alt="">
+            </div>
+            <div class="threeD-image-box col-2 ">
+                <img src="images/3D/misc/headphone rockss2.png" alt="">
+            </div>
+            <div class="threeD-image-box ">
+                <img src="images/3D/paper cutter/6.png" alt="">
             </div>
         </div>
     </section>
@@ -713,9 +528,7 @@
 
         </div>
     </section>
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script> -->
     <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
-    <!-- <script src="https://smtpjs.com/v3/smtp.js"></script> -->
     <script src="script.js"></script>
 </body>
 

@@ -16,6 +16,7 @@
     --icon-color: #000000;
     --checkbtn-color: rgb(19, 19, 19);
     --sidenav-color: #000000;
+    --parah-color: #7d7d7d;
     --sidenav-txt-color: #ffffff;
     --gradient: linear-gradient(to right, rgba(28, 216, 210, 1), rgba(0, 101, 255, 1));
     --gradient-glass: linear-gradient(to right, rgba(28, 216, 210, 0.2), rgba(0, 101, 255, 0.2));
@@ -98,11 +99,25 @@ body {
     display: inline-block;
     line-height: 80px;
     margin: 0 20px;
+    transition: 0.3s ease-in-out;
 }
 
 .navbar .nav-ul li a {
     color: var(--text-color);
+    padding: 5px;
     font-weight: bold;
+    transition: 0.3s ease-in-out;
+}
+
+.navbar .nav-ul li:hover {
+    font-weight: 900;
+    color: var(--text-color);
+    transform: scale(1.2);
+}
+
+.navbar .nav-ul li a:hover {
+    background: #efefef;
+    border-radius: 5px;
 }
 
 #check {
@@ -164,6 +179,15 @@ body {
         color: var(--sidenav-txt-color);
     }
 
+    .navbar .nav-ul li:hover {
+        display: block;
+        transform: none;
+    }
+
+    .navbar .nav-ul li a:hover {
+        color: #000
+    }
+
     #check:checked~.nav-ul {
         left: -50%;
     }
@@ -200,11 +224,16 @@ body {
     border-radius: 50%;
     border: 5px solid #000;
     padding: 3px;
+    transition: 0.5s ease;
+}
+
+.details .pic img:hover {
+    padding: 10px;
+    border-radius: 20%;
 }
 
 .details .text {
     padding-top: 40px;
-    /* padding-left: 20px; */
 }
 
 .details .text .text_p1 {
@@ -218,8 +247,19 @@ body {
     margin-bottom: 20px;
 }
 
+.details .text .text_p4 {
+    font-size: 18px;
+    margin-top: 1em;
+    line-height: 1.5;
+    color: var(--parah-color);
+}
+
+.details .text .text_p4::first-line {
+    margin-bottom: 0.5em;
+}
+
 .auto-type {
-    color: #000000;
+    color: #756594;
     font-size: 30px;
     font-weight: bolder;
 }
@@ -428,6 +468,11 @@ body {
 
     .details .text .text_p3 {
         font-size: 18px;
+        text-align: center;
+    }
+
+    .details .text .text_p4 {
+        font-size: 15px;
         text-align: center;
     }
 
@@ -726,10 +771,6 @@ article .icon {
 
     article {
         font-size: 12px;
-    }
-
-    article .icon {
-        font-size: 25px;
     }
 
 }
